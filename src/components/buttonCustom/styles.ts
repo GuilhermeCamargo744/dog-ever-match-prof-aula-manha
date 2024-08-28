@@ -1,11 +1,11 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 
 
 export const style = StyleSheet.create({
     button: {
         backgroundColor: "#FFF",
         height: 53,
-        width: "100%",
+        width: Dimensions.get("screen").width,
         borderRadius: 8,
         elevation: 5,
         shadowColor: "#000",
