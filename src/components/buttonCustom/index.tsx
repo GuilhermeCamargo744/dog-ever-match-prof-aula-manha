@@ -4,13 +4,16 @@ import { style } from "./styles"
 interface IProps {
     titleButton: string,
     styleContainer?: StyleProp<ViewStyle>,
-    styleText?: StyleProp<TextStyle>
+    styleText?: StyleProp<TextStyle>,
+    handleClick: () => {}
 }
 
-export const ButtonCustom = ({titleButton, styleContainer, styleText}:IProps ) => {
+export const ButtonCustom = ({titleButton, styleContainer, styleText, handleClick}:IProps ) => {
     return(
         <View>
-            <TouchableOpacity style={[style.button, styleContainer]}>
+            <TouchableOpacity 
+            onPress={handleClick}
+            style={[style.button, styleContainer]}>
                  <Text style={[style.title, styleText]}>
                     {titleButton}
                  </Text>

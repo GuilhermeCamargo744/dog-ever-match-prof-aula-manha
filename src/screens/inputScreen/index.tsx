@@ -2,6 +2,7 @@ import { ButtonCustom } from "@/src/components/buttonCustom"
 import LottieView from "lottie-react-native"
 import { Dimensions, Platform, StyleSheet, Text, View } from "react-native"
 import { style } from "./styles"
+import { router } from "expo-router"
 
 export const InputScreen = () => {
 
@@ -19,11 +20,14 @@ export const InputScreen = () => {
         />
         }
         
-        <ButtonCustom titleButton="Cadastrar" />
+        <ButtonCustom 
+          titleButton="Cadastrar" 
+        />
         <ButtonCustom 
           titleButton="Entrar" 
           styleContainer={{backgroundColor: "#FFC42D" }} 
           styleText={{color: "#FFF"}}
+          handleClick={() => router.navigate("/(app)/auth/login")}
         />
       </View>
     )
