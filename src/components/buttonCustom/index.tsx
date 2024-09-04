@@ -5,7 +5,7 @@ interface IProps {
     titleButton: string,
     styleContainer?: StyleProp<ViewStyle>,
     styleText?: StyleProp<TextStyle>,
-    handleClick: () => {}
+    handleClick: () => void
 }
 
 export const ButtonCustom = ({titleButton, styleContainer, styleText, handleClick}:IProps ) => {
