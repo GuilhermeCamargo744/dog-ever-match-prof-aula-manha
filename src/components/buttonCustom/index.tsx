@@ -10,7 +10,6 @@ interface IProps {
 
 export const ButtonCustom = ({titleButton, styleContainer, styleText, handleClick}:IProps ) => {
     return(
-        <View>
             <TouchableOpacity 
             onPress={handleClick}
             style={[style.button, styleContainer]}>
@@ -18,6 +17,5 @@ export const ButtonCustom = ({titleButton, styleContainer, styleText, handleClic
                     {titleButton}
                  </Text>
             </TouchableOpacity>  
-        </View>
     )
 }

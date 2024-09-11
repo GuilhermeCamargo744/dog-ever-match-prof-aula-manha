@@ -8,9 +8,11 @@ export const InputScreen = () => {
 
     return(
       <View
-        style={style.containerStyle}
+        style={[style.containerStyle]}
       >
-        <Text>Hellow world</Text>
+        <Text
+          style={style.styleTitle}
+        >DogEverMatch</Text>
         {
           Platform.OS != "web" && 
           <LottieView
@@ -22,6 +24,11 @@ export const InputScreen = () => {
         
         <ButtonCustom 
           titleButton="Cadastrar" 
+          handleClick={() => {}}
+          styleContainer={{
+            marginTop: 40,
+            marginBottom: 32
+          }}
         />
         <ButtonCustom 
           titleButton="Entrar" 

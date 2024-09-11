@@ -5,7 +5,7 @@ export const style = StyleSheet.create({
     button: {
         backgroundColor: "#FFF",
         height: 53,
-        width: Dimensions.get("screen").width,
+        width: "90%",
         borderRadius: 8,
         elevation: 5,
         shadowColor: "#000",
