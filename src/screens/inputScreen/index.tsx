@@ -24,7 +24,7 @@ export const InputScreen = () => {
         
         <ButtonCustom 
           titleButton="Cadastrar" 
-          handleClick={() => {}}
+          handleClick={() => router.navigate("/(app)/auth/register")}
           styleContainer={{
             marginTop: 40,
             marginBottom: 32

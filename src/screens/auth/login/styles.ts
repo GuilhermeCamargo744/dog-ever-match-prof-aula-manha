@@ -7,6 +7,8 @@ export const styles = StyleSheet.create({
         height: "100%",
         justifyContent: "flex-start",
         alignItems: "center",
+        paddingHorizontal: 24,
+        paddingTop: 12
     },
     title: {
         fontSize: 32,

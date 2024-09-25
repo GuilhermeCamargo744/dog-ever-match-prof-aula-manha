@@ -1,8 +1,13 @@
 import { Text, TextInput, View } from "react-native"
 import { styles } from "./styles"
 
+interface IProps {
+    title: string;
+    setText: (value: string) => void;
+}
 
-export const InputWithTitle = () => {
+export const InputWithTitle = ({setText, title}: IProps) => {
+
     return(
         <View
             style={styles.container}
@@ -10,10 +15,11 @@ export const InputWithTitle = () => {
             <Text
                 style={styles.title}
             >
-                TESTE
+                {title}
             </Text>
             <TextInput
                 style={styles.styleInput}
+                onChangeText={setText}
             />
         </View>
     )

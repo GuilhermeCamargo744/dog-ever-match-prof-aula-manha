@@ -4,8 +4,12 @@ import { Text, View } from "react-native"
 
 import {styles} from "./styles"
 import { InputWithTitle } from "@/src/components/inputWithTitle"
+import { useState } from "react"
 
 export const LoginScreen = () => {
+    const [email, setEmail] = useState("")
+    const [senha, setSenha] = useState("")
+
     return(
         <View
             style={styles.container}
@@ -13,7 +17,15 @@ export const LoginScreen = () => {
             <Text style={styles.title}>
                 DogEverMatch
             </Text>
-            <InputWithTitle/>
+            <InputWithTitle
+                setText={setEmail}
+                title="E-mail:"
+            />
+
+            <InputWithTitle
+                setText={setSenha}
+                title="Senha:"
+            />
             <ButtonCustom
                 titleButton="Entrar"
                 styleContainer={{
