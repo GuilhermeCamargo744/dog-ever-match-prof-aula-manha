@@ -5,10 +5,25 @@ import { Text, View } from "react-native"
 import {styles} from "./styles"
 import { InputWithTitle } from "@/src/components/inputWithTitle"
 import { useState } from "react"
+import { loginApi } from "@/src/server/config"
 
 export const LoginScreen = () => {
     const [email, setEmail] = useState("")
     const [senha, setSenha] = useState("")
+
+    const handleLogin = async () => {
+        
+        const payload = {
+            email: email,
+            password: senha
+        }
+
+        console.log("CAIU aq", payload)
+
+       return await loginApi(payload)
+       .then((response) => console.log("response", response.data))
+       .catch((error) => console.log("error", error))
+    }
 
     return(
         <View
@@ -36,6 +51,7 @@ export const LoginScreen = () => {
                 styleText={{
                     color: colors.WHITE
                 }}
+                handleClick={handleLogin}
             />
         </View>
     )
