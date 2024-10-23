@@ -7,6 +7,7 @@ import { InputWithTitle } from "@/src/components/inputWithTitle";
 import { useState } from "react";
 import { loginApi } from "@/src/server/config";
 import { getToken, storeToken } from "@/src/utils/asyncStorage/loginStorage";
+import { router } from "expo-router";
 
 export const LoginScreen = () => {
   const [email, setEmail] = useState("");
@@ -25,6 +26,7 @@ export const LoginScreen = () => {
         if (response.status == 200) {
           storeToken(response.data.token);
           console.log("SUCESSO@@@@@@@@@@@@@@@@");
+          router.navigate("/home");
         }
       })
       .catch((error) => console.log("error", error));
