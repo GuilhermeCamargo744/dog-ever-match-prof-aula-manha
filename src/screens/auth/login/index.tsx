@@ -30,9 +30,6 @@ export const LoginScreen = () => {
       .catch((error) => console.log("error", error));
   };
 
-  const valueToken = getToken();
-  console.log("valueToken", valueToken);
-
   return (
     <View style={styles.container}>
       <Text style={styles.title}>DogEverMatch</Text>
